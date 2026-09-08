@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人 IP 作品集 | 大學四年成果展</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <div class="logo">YOUR NAME<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#portfolio">成果展示</a></li>
+            <li><a href="#skills">核心技能</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- 個人主視覺 (Hero Section) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 <span class="highlight" id="typed-text">你的名字</span></h1>
+            <h2>[ 你的專業定位 / 例如：全端開發者 & UI 設計師 ]</h2>
+            <p>歡迎來到我的個人品牌空間！這裡記錄了我大學四年來的學習歷程、專案作品與實務成果。</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn primary-btn">瀏覽作品</a>
+                <a href="#contact" class="btn secondary-btn">聯絡我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我 -->
+    <section id="about" class="section fade-in">
+        <h2 class="section-title">關於我 <span>About Me</span></h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>畢業於 <strong>XX 大學 XX 學系</strong>。在大學四年間，我致力於將理論知識轉化為實際應用，擅長於解決問題、專案開發與跨領域合作。</p>
+                <p>我相信持續學習與輸出的力量，這個網站記錄了我從大一到大四累積的核心競爭力與代表作品。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成果展示區 (Portfolio) -->
+    <section id="portfolio" class="section gray-bg fade-in">
+        <h2 class="section-title">大學四年成果 <span>Projects & Works</span></h2>
+        
+        <!-- 分類過濾按鈕 -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">全部顯示</button>
+            <button class="filter-btn" data-filter="project">畢業專案</button>
+            <button class="filter-btn" data-filter="assignment">課程作業</button>
+            <button class="filter-btn" data-filter="achievement">競賽成果</button>
+            <button class="filter-btn" data-filter="personal">自主學習</button>
+        </div>
+
+        <!-- 分類卡片展示 -->
+        <div class="portfolio-grid">
+            
+            <!-- 作品卡片 1：畢業專案/核心專案 -->
+            <div class="card" data-category="project">
+                <div class="card-tag tag-project">畢業專案</div>
+                <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+                <div class="card-content">
+                    <h3>AI 智慧系統開發</h3>
+                    <p class="card-time">2025.09 - 2026.06 (大四)</p>
+                    <p class="card-desc">運用深度學習技術開發的智慧分析平台，有效提升 30% 數據處理效率。</p>
+                    <div class="card-skills">
+                        <span>Python</span><span>TensorFlow</span><span>Web</span>
+                    </div>
+                    <a href="#" class="card-link" onclick="openModal('AI 智慧系統開發', '這是一個運用深度學習技術開發的智慧分析平台，歷時一年完成。主要解決了數據處理緩慢的問題...', '2025.09 - 2026.06', ['Python', 'TensorFlow', 'Web'])">查看詳情 &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 作品卡片 2：課程作業/專題 -->
+            <div class="card" data-category="assignment">
+                <div class="card-tag tag-assignment">課程作業</div>
+                <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+                <div class="card-content">
+                    <h3>電商網站前端介面重構</h3>
+                    <p class="card-time">2024.11 (大三)</p>
+                    <p class="card-desc">網頁設計課程期末專題，實現響應式設計（RWD）與優化使用者體驗。</p>
+                    <div class="card-skills">
+                        <span>HTML/CSS</span><span>JavaScript</span><span>RWD</span>
+                    </div>
+                    <a href="#" class="card-link" onclick="openModal('電商網站前端介面重構', '網頁設計課程期末專題，透過原生 HTML/CSS/JS 完成介面重構，實現無障礙與多裝置響應。', '2024.11', ['HTML/CSS', 'JavaScript', 'RWD'])">查看詳情 &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 作品卡片 3：競賽/活動成果 -->
+            <div class="card" data-category="achievement">
+                <div class="card-tag tag-achievement">競賽成果</div>
+                <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+                <div class="card-content">
+                    <h3>全國黑客松競賽 - 佳作</h3>
+                    <p class="card-time">2024.05 (大三)</p>
+                    <p class="card-desc">在 48 小時內與團隊合作完成永續議題 Prototype 開發與簡報發表。</p>
+                    <div class="card-skills">
+                        <span>團隊合作</span><span>UI/UX</span><span>簡報</span>
+                    </div>
+                    <a href="#" class="card-link" onclick="openModal('全國黑客松競賽 - 佳作', '在 48 小時內極限開發，從痛點挖掘、使用者訪談到 UI/UX 原型設計一手包辦。', '2024.05', ['團隊合作', 'UI/UX', '簡報'])">查看詳情 &rarr;</a>
+                </div>
+            </div>
+
+            <!-- 作品卡片 4：實習/自主作品 -->
+            <div class="card" data-category="personal">
+                <div class="card-tag tag-personal">自主學習</div>
+                <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400');"></div>
+                <div class="card-content">
+                    <h3>個人部落格與 IP 經營</h3>
+                    <p class="card-time">2023 - 至今</p>
+                    <p class="card-desc">撰寫技術文章與學習心得，累積超過 20+ 篇筆記與分享。</p>
+                    <div class="card-skills">
+                        <span>技術寫作</span><span>個人品牌</span>
+                    </div>
+                    <a href="#" class="card-link" onclick="openModal('個人部落格與 IP 經營', '長期經營技術寫作，分享前端開發與大學專案實戰經驗，累積穩定流量與讀者互動。', '2023 - 至今', ['技術寫作', '個人品牌'])">查看詳情 &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 核心技能區 (Skills) -->
+    <section id="skills" class="section fade-in">
+        <h2 class="section-title">核心技能 <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>專業硬實力</h3>
+                <ul>
+                    <li>前端開發（HTML, CSS, JavaScript）</li>
+                    <li>資料分析與程式設計</li>
+                    <li> UI/UX 介面設計 (Figma)</li>
+                </ul>
+            </div>
+            <div class="skill-box">
+                <h3>軟實力與經驗</h3>
+                <ul>
+                    <li>跨領域溝通與專案管理</li>
+                    <li>簡報展示與提案技巧</li>
+                    <li>問題解決與快速自主學習</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 / 聯絡方式 (Contact) -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h2>讓我們取得聯繫！</h2>
+            <p>如果您對我的作品感興趣，歡迎隨時透過信件或社群平台與我聯繫。</p>
+            <p class="email" id="copy-email" title="點擊複製信箱">your.email@example.com</p>
+            <div class="social-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Instagram / Blog</a>
+            </div>
+            <p class="copyright">&copy; 2026 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 彈跳視窗 Modal (詳細作品介紹) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">作品標題</h2>
+            <p id="modalTime" class="card-time">時間</p>
+            <div id="modalSkills" class="card-skills" style="margin: 15px 0;"></div>
+            <p id="modalDesc">詳細介紹內容...</p>
+        </div>
+    </div>
+
+    <!-- 載入 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
